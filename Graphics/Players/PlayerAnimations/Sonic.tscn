@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://d1e4muavtnun6"]
+[gd_scene load_steps=61 format=3 uid="uid://d1e4muavtnun6"]
 
 [ext_resource type="Material" uid="uid://bveqi5m5ihsgj" path="res://Shaders/PlayerPalette.tres" id="1_bjmss"]
 [ext_resource type="Texture2D" uid="uid://4lhg0ovh1pe8" path="res://Graphics/Players/Sonic.png" id="2_6xy2a"]
@@ -180,7 +180,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="77"]
 resource_name = "crouch"
-length = 0.2
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -188,10 +188,10 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [12, 13]
+"values": [27, 12, 13]
 }
 
 [sub_resource type="Animation" id="Animation_tn47m"]
@@ -229,7 +229,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="107"]
 resource_name = "dropDash"
-length = 0.8
+length = 0.13
 loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
@@ -239,10 +239,10 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [70, 69, 70, 69, 70, 69, 70, 69, 85, 136, 137, 71, 81, 82, 83, 84]
+"values": [70, 69]
 }
 
 [sub_resource type="Animation" id="99"]
@@ -516,7 +516,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="79"]
 resource_name = "idle"
-length = 3.0
+length = 0.22
+loop_mode = 2
 step = 0.0166667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -525,101 +526,17 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0835, 0.1837),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [2, 3, 4]
 }
 
-[sub_resource type="Animation" id="113"]
-resource_name = "idle1"
-length = 0.6
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sonic/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 6]
-}
-
-[sub_resource type="Animation" id="114"]
-resource_name = "idle2"
-length = 2.8
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sonic/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [7, 8, 7, 8, 7, 8, 9]
-}
-
-[sub_resource type="Animation" id="116"]
-resource_name = "idle3"
-length = 0.1
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sonic/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-
-[sub_resource type="Animation" id="117"]
-resource_name = "idle4"
-length = 0.6
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sonic/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [3, 4]
-}
-
-[sub_resource type="Animation" id="118"]
-resource_name = "idle5"
-length = 0.133333
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sonic/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [5]
-}
-
-[sub_resource type="Animation" id="109"]
+[sub_resource type="Animation" id="Animation_mtywa"]
 resource_name = "idle_super"
-length = 0.9
+length = 0.7
 loop_mode = 1
+step = 0.0166667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -627,10 +544,10 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.334),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+"values": [7, 8]
 }
 
 [sub_resource type="Animation" id="80"]
@@ -651,7 +568,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="87"]
 resource_name = "peelOut"
-length = 0.4
 loop_mode = 1
 step = 0.0166667
 tracks/0/type = "value"
@@ -661,10 +577,10 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1002, 0.2171, 0.3674, 0.4843, 0.6179, 0.7348, 0.8517),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [28, 29, 30, 31]
+"values": [28, 81, 29, 82, 30, 83, 31, 84]
 }
 
 [sub_resource type="Animation" id="103"]
@@ -703,7 +619,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="82"]
 resource_name = "run"
-length = 0.4
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -712,10 +628,10 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [24, 25, 26, 27]
+"values": [5, 6, 7, 8, 9, 24, 25, 26]
 }
 
 [sub_resource type="Animation" id="100"]
@@ -769,6 +685,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="83"]
 resource_name = "spinDash"
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -777,10 +694,10 @@ tracks/0/path = NodePath("Sonic/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [37, 38, 37, 39, 37, 40, 37, 41, 37, 42]
+"values": [37, 38, 37, 39, 37, 40, 37]
 }
 
 [sub_resource type="Animation" id="84"]
@@ -1106,12 +1023,7 @@ _data = {
 "hangShimmy": SubResource("Animation_pv58b"),
 "hurt": SubResource("78"),
 "idle": SubResource("79"),
-"idle1": SubResource("113"),
-"idle2": SubResource("114"),
-"idle3": SubResource("116"),
-"idle4": SubResource("117"),
-"idle5": SubResource("118"),
-"idle_super": SubResource("109"),
+"idle_super": SubResource("Animation_mtywa"),
 "lookUp": SubResource("80"),
 "peelOut": SubResource("87"),
 "push": SubResource("103"),
@@ -1265,6 +1177,7 @@ texture = ExtResource("2_6xy2a")
 offset = Vector2(0, -4)
 hframes = 16
 vframes = 18
+frame = 13
 
 [node name="DashDust" type="AnimatedSprite2D" parent="Sprite2D"]
 visible = false

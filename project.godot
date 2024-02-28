@@ -28,9 +28,11 @@ shapes/collision/shape_color=Color(1, 1, 1, 0.501961)
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=224
+window/size/viewport_width=900
+window/size/viewport_height=640
+window/size/resizable=false
 window/stretch/mode="viewport"
+window/stretch/scale=3.0
 
 [dotnet]
 
@@ -229,7 +231,6 @@ ui_reset={
 
 textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
-renderer/rendering_method="gl_compatibility"
 environment/defaults/default_environment="res://default_env.tres"
 2d/snapping/use_gpu_pixel_snap=true
 batching/precision/uv_contract=true
